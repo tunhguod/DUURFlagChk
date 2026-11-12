@@ -90,7 +90,7 @@ const PRIZE_MAP = [
 
 // group: 'reach'（リーチ目役） | 'flag'（重複フラグ）
 // nums: 設定 1・2・5・6 の置数（/65536）
-// color: バッジの色（下の colors のキー）
+// color: ランプの色（重複する小役。slot-flag-checker-core の LAMP_COLORS の名前）
 const FLAGS = [
   { name: 'T1', group: 'reach', nums: [19, 19, 19, 19], color: 'red' },
   { name: 'T2', group: 'reach', nums: [49, 50, 61, 77] },
@@ -131,10 +131,6 @@ export default {
   settings: [1,  2,  5,  6],
   maxSlip: 4,
   denominator: 65536,
-  colors: {
-    purple: '#9400d3',
-    red: '#a62828',
-  },
   groups: [
     { id: 'reach', label: 'リーチ目役', showOdds: false },
     { id: 'flag', label: 'フラグ (重複フラグのみ)', showOdds: false },
